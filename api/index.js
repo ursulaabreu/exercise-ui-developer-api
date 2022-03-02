@@ -1,10 +1,15 @@
 const app = require('express')();
+const cors = require('cors');
 const PORT = 8080;
 
 app.listen(
 	PORT,
 	() => console.log(`It's alive on http://locallhost:${PORT}`)
 );
+
+app.use(cors({
+    origin: '*'
+}));
 
 app.get('/events', (req, res) => {
 	res.status(200).send([
