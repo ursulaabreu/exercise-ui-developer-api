@@ -47,7 +47,17 @@ app.get('/events', (req, res) => {
 		  "timestamp": "2021-08-02T12:03:00.000Z",
 		  "level": "INFO",
 		  "message": "Telemetry downloaded"
+		},
+		{
+		  "timestamp": "2021-08-03T09:03:00.000Z",
+		  "level": "WARNING",
+		  "message": "Metric 1 is above the warning threshold"
+		},
+		{
+		  "timestamp": "2021-08-03T12:03:00.000Z",
+		  "level": "ERROR",
+		  "message": "Metric 1 is above the error threshold"
 		}
-	  ]
-	  )
+	]
+	)
 });
